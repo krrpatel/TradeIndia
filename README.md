@@ -8,7 +8,7 @@
 
 TradeIndia is a web-based stock trading and research application inspired by CS50 Finance, but redesigned specifically for the Indian stock market (NSE). The project allows users to register, log in, and simulate buying and selling of NSE-listed stocks using real-time market data fetched from Yahoo Finance. In addition to trading functionality, the application also includes a Research section that enables users to search for companies by name and view detailed financial and business information.
 
-The primary goal of this project was to apply the concepts learned throughout CS50x—such as Flask, SQL, authentication, APIs, and frontend templating—to build a realistic, user-friendly financial application that feels relevant to the Indian market. The project goes beyond the original Finance problem set by adding a dark-themed interface, NSE market timing logic, and a research module with company overviews.
+The primary goal of this project was to apply the concepts learned throughout CS50x such as Flask, SQL, authentication, APIs, and frontend templating to build a realistic, user-friendly financial application that feels relevant to the Indian market. The project goes beyond the original Finance problem set by adding a dark-themed interface, NSE market timing logic, and a research module with company overviews.
 
 ---
 
@@ -94,7 +94,3 @@ The dark theme was chosen to improve visual comfort and to give the application 
 ## Conclusion
 
 TradeIndia is a complete and functional stock trading and research application that demonstrates my understanding of web development, APIs, databases, authentication, and frontend design. This project represents a meaningful extension of CS50 Finance into a region-specific solution for the Indian stock market and serves as the final culmination of my learning in CS50x.
-
-
-```bash
-submit50 cs50/problems/2025/x/project
