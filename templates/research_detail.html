@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Research - {{ symbol }}
+{% endblock %}
+
+{% block main %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+
+        <div class="card shadow-sm">
+            <div class="card-body">
+
+                <h4 class="text-white fw-bold">
+                    {{ info.longName }} ({{ symbol }})
+                </h4>
+
+                <p class="text-muted mb-3">
+                    Current Price:
+                    <span class="fw-bold text-success">
+                        ₹{{ "%.2f"|format(info.regularMarketPrice) }}
+                    </span>
+                </p>
+
+                <hr class="border-secondary">
+
+                <div class="row mb-4">
+                    <div class="col-md-6 text-light">
+                        <strong>Sector:</strong> {{ info.sector }}<br>
+                        <strong>Industry:</strong> {{ info.industry }}
+                    </div>
+
+                    <div class="col-md-6 text-light">
+                        <strong>Market Cap:</strong> {{ market_cap }}<br>
+                        <strong>52W High:</strong> ₹{{ "%.2f"|format(info.fiftyTwoWeekHigh) }}<br>
+                        <strong>52W Low:</strong> ₹{{ "%.2f"|format(info.fiftyTwoWeekLow) }}
+                    </div>
+                </div>
+
+                <hr class="border-secondary my-4">
+
+                <h5 class="text-white fw-bold mb-3">Company Overview</h5>
+
+                <p class="text-muted" style="line-height: 1.7;">
+                    {{ info.longBusinessSummary }}
+                </p>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

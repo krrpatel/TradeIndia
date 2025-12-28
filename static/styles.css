@@ -1,0 +1,100 @@
+/* GLOBAL */
+body {
+    background-color: #0d1117;
+    color: #e6edf3;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #010409 !important;
+}
+
+/* CARDS */
+.card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+}
+
+.card-title {
+    color: #58a6ff;
+}
+
+/* INPUTS */
+.form-control {
+    background-color: #0d1117;
+    color: #e6edf3;
+    border: 1px solid #30363d;
+}
+
+.form-control::placeholder {
+    color: #8b949e;
+}
+
+.form-control:focus {
+    background-color: #0d1117;
+    color: #e6edf3;
+    border-color: #58a6ff;
+    box-shadow: none;
+}
+
+/* BUTTONS */
+.btn-primary {
+    background-color: #238636;
+    border-color: #238636;
+}
+
+.btn-primary:hover {
+    background-color: #2ea043;
+}
+
+.btn-outline-secondary {
+    color: #e6edf3;
+    border-color: #30363d;
+}
+
+/* ALERTS */
+.alert-primary {
+    background-color: #1f6feb;
+    border: none;
+    color: white;
+}
+
+/* TEXT */
+.text-muted {
+    color: #8b949e !important;
+}
+
+/* FORCE DARK TABLE (HISTORY + PORTFOLIO) */
+.history-table {
+    background-color: #0d1117;
+    color: #e6edf3;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.history-table thead {
+    background-color: #161b22;
+    color: #8b949e;
+}
+
+.history-table th,
+.history-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #21262d;
+    background-color: transparent !important;
+}
+
+.history-table tbody tr:hover {
+    background-color: #161b22;
+}
+
+.table > :not(caption) > * > * {
+    background-color: transparent !important;
+}
+
+.flash-alert {
+    background-color: #161b22;
+    color: #e6edf3;
+    border: none;
+    border-bottom: 1px solid #30363d;
+}

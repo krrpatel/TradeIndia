@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Buy
+{% endblock %}
+
+{% block main %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-body text-center">
+
+                <h4 class="mb-3 text-white">Buy Indian Shares</h4>
+                <p class="text-muted mb-4">
+                    Enter an NSE-listed stock symbol and quantity
+                </p>
+
+                <form action="/buy" method="post">
+
+                    <div class="mb-3">
+                        <input
+                            autocomplete="off"
+                            autofocus
+                            class="form-control text-center"
+                            name="symbol"
+                            placeholder="Stock Symbol (e.g. RELIANCE)"
+                            type="text"
+                            required
+                        >
+                    </div>
+
+                    <div class="mb-3">
+                        <input
+                            autocomplete="off"
+                            class="form-control text-center"
+                            name="shares"
+                            placeholder="Number of Shares"
+                            type="number"
+                            min="1"
+                            step="1"
+                            required
+                        >
+                    </div>
+
+                    <button class="btn btn-primary w-100" type="submit">
+                        Buy Now
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

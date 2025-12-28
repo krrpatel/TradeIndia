@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Research
+{% endblock %}
+
+{% block main %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+
+        <div class="card shadow-sm">
+            <div class="card-body text-center">
+
+                <h4 class="text-white fw-bold mb-3">🔍 Stock Research (NSE)</h4>
+                <p class="text-muted mb-4">
+                    Search companies by name (real NSE data)
+                </p>
+
+                <form action="/research" method="post">
+                    <div class="mb-3">
+                        <input
+                            class="form-control text-center"
+                            name="query"
+                            placeholder="e.g. Reliance, Bank, Infosys"
+                            required
+                        >
+                    </div>
+                    <button class="btn btn-primary w-100">
+                        Search
+                    </button>
+                </form>
+
+            </div>
+        </div>
+
+        {% if results %}
+        <div class="card mt-4">
+            <div class="card-body">
+
+                <h6 class="text-muted mb-3">Search Results</h6>
+
+                <ul class="list-group list-group-flush">
+                    {% for stock in results %}
+                    <li class="list-group-item bg-transparent text-light d-flex justify-content-between align-items-center">
+                        <span>{{ stock.name }}</span>
+                        <a
+                            href="/research/{{ stock.symbol }}"
+                            class="btn btn-sm btn-outline-info"
+                        >
+                            View
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+</div>
+{% endblock %}
